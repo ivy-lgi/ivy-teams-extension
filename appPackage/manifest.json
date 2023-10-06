@@ -1,44 +1,50 @@
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.16",
-    "version": "1.0.0",
-    "id": "${{TEAMS_APP_ID}}",
-    "packageName": "com.axonivy.teams.extension",
-    "developer": {
-        "name": "Axon Ivy AG",
-        "websiteUrl": "https://www.example.com",
-        "privacyUrl": "https://www.example.com/privacy",
-        "termsOfUseUrl": "https://www.example.com/termofuse"
-    },
-    "icons": {
-        "color": "resources/color.png",
-        "outline": "resources/outline.png"
-    },
-    "name": {
-        "short": "Ivy",
-        "full": "Axon Ivy Teams Extension"
-    },
-    "description": {
-        "short": "Short description.",
-        "full": "Full description."
-    },
-    "accentColor": "#FFFFFF",
-    "bots": [
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0",
+  "id": "${{TEAMS_APP_ID}}",
+  "packageName": "com.axonivy.teams.extension",
+  "developer": {
+    "name": "Axon Ivy AG",
+    "websiteUrl": "https://www.example.com",
+    "privacyUrl": "https://www.example.com/privacy",
+    "termsOfUseUrl": "https://www.example.com/termofuse"
+  },
+  "icons": {
+    "color": "resources/color.png",
+    "outline": "resources/outline.png"
+  },
+  "name": {
+    "short": "Ivy",
+    "full": "Axon Ivy Teams Extension"
+  },
+  "description": {
+    "short": "Short description.",
+    "full": "Full description."
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "${{BOT_ID}}",
+      "scopes": ["personal"],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
         {
-            "botId": "${{BOT_ID}}",
-            "scopes": [
-                "personal"
-            ],
-            "supportsFiles": false,
-            "isNotificationOnly": true
+          "scopes": ["personal"],
+          "commands": [
+            {
+              "title": "starts",
+              "description": "Returns all starts."
+            }
+          ]
         }
-    ],
-    "composeExtensions": [],
-    "configurableTabs": [],
-    "staticTabs": [],
-    "permissions": [
-        "identity",
-        "messageTeamMembers"
-    ],
-    "validDomains": []
+      ]
+    }
+  ],
+  "composeExtensions": [],
+  "configurableTabs": [],
+  "staticTabs": [],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": []
 }

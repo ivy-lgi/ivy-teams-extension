@@ -8,8 +8,12 @@ export interface NewTask {
   description: string;
   start: string;
   expiry: string;
-  activator: string,
+  activator: string;
   priority: string;
   state: string;
   link: string;
+}
+
+export interface Starts {
+  starts: any[];
 }
